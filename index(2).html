@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaseen Desouky — Financial Analyst · Accountant · Data Analyst · Software Engineer</title>
+<meta name="description" content="Yaseen Desouky — Financial Analyst, Accountant, Data Analyst & Software Engineer. Portfolio, journey, certificates and experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0C1622;
+  --navy-deep:#050A11;
+  --navy-mid:#132234;
+  --cream:#EEF2F7;
+  --cream-soft:#E2E8F0;
+  --gold:#2E8EFF;
+  --gold-bright:#6AB4FF;
+  --ink:#0D1420;
+  --fog:#64728A;
+  --line-light: rgba(13,20,32,0.12);
+  --line-dark: rgba(106,180,255,0.16);
+  --bg: var(--cream);
+  --bg-soft: var(--cream-soft);
+  --text: var(--ink);
+  --text-muted: #4E5B6E;
+  --card-bg: #FFFFFF;
+  --line: var(--line-light);
+  --shadow: 0 10px 30px rgba(13,20,32,0.10);
+  --radius: 4px;
+}
+html.dark{
+  --bg: var(--navy);
+  --bg-soft: var(--navy-mid);
+  --text: var(--cream);
+  --text-muted: #8A97AC;
+  --card-bg: var(--navy-mid);
+  --line: var(--line-dark);
+  --shadow: 0 10px 34px rgba(0,0,0,0.45);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Cairo',sans-serif;
+  transition:background .35s ease, color .35s ease;
+  overflow-x:hidden;
+}
+html[dir="ltr"] body{ font-family:'Fraunces','Cairo',sans-serif; }
+.display{ font-family:'Amiri','Fraunces',serif; }
+html[dir="ltr"] .display{ font-family:'Fraunces',serif; }
+.mono{ font-family:'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; }
+
+::selection{ background:var(--gold); color:var(--navy-deep); }
+
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
+button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+section{ padding: 90px 6vw; max-width:1180px; margin:0 auto; }
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:flex; align-items:center; gap:10px; margin-bottom:14px;
+}
+.eyebrow::before{ content:''; width:22px; height:1px; background:var(--gold); }
+h2.section-title{
+  font-size:clamp(1.7rem,3.4vw,2.6rem);
+  font-weight:600;
+  margin-bottom:8px;
+}
+.section-sub{ color:var(--text-muted); max-width:620px; font-size:.98rem; margin-bottom:46px; }
+
+/* ---------- NAV ---------- */
+header.nav{
+  position:sticky; top:0; z-index:100;
+  background:color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1180px; margin:0 auto; padding:16px 6vw;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.brand{ font-family:'IBM Plex Mono',monospace; font-size:.85rem; letter-spacing:.08em; }
+.brand b{ color:var(--gold); }
+nav.links{ display:flex; gap:26px; font-size:.86rem; }
+nav.links a{ opacity:.8; transition:opacity .2s, color .2s; position:relative; }
+nav.links a:hover{ opacity:1; color:var(--gold); }
+.nav-tools{ display:flex; align-items:center; gap:10px; }
+.search-wrap{ position:relative; display:flex; align-items:center; }
+.search-wrap input{
+  width:0; opacity:0; padding:0; border:1px solid var(--line);
+  border-radius:var(--radius); background:var(--card-bg); color:var(--text);
+  font-family:'Cairo',sans-serif; font-size:.85rem;
+  transition:width .3s ease, opacity .3s ease, padding .3s ease;
+  height:36px;
+}
+.search-wrap.open input{ width:200px; opacity:1; padding:0 12px; }
+.icon-btn{
+  width:36px; height:36px; border:1px solid var(--line); border-radius:var(--radius);
+  display:flex; align-items:center; justify-content:center; font-size:1rem;
+  background:var(--card-bg); flex-shrink:0;
+  transition: border-color .2s, transform .2s;
+}
+.icon-btn:hover{ border-color:var(--gold); }
+.lang-btn{ font-family:'IBM Plex Mono',monospace; font-size:.72rem; font-weight:600; }
+#search-results-count{ font-size:.72rem; color:var(--text-muted); font-family:'IBM Plex Mono',monospace; white-space:nowrap; }
+
+/* ---------- HERO ---------- */
+.hero{
+  min-height:92vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding:60px 6vw 40px; position:relative;
+}
+.hero::before{
+  content:''; position:absolute; inset:0;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 72%);
+  opacity:.5; pointer-events:none;
+}
+.portrait{
+  width:150px; height:150px; border-radius:50%;
+  border:2px solid var(--gold);
+  outline: 1px solid var(--line); outline-offset:8px;
+  object-fit:cover; margin-bottom:28px;
+  background:var(--bg-soft);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'IBM Plex Mono',monospace; font-size:.65rem; color:var(--text-muted); text-align:center; padding:10px;
+  position:relative; z-index:1;
+}
+.hero .display{ font-size:clamp(2.4rem,7vw,4.6rem); font-weight:600; line-height:1.05; margin-bottom:18px; position:relative; z-index:1; }
+.hero .roles{
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap; justify-content:center;
+  font-family:'IBM Plex Mono',monospace; font-size:.85rem; letter-spacing:.03em;
+  color:var(--text-muted); margin-bottom:40px; position:relative; z-index:1;
+}
+.hero .roles span.dot{ color:var(--gold); }
+.cta-btn{
+  border:1px solid var(--gold); padding:14px 32px; border-radius:var(--radius);
+  font-size:.9rem; font-weight:600; letter-spacing:.02em; position:relative; z-index:1;
+  background:var(--gold); color:var(--navy-deep);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.cta-btn:hover{ transform:translateY(-2px); box-shadow:0 8px 22px rgba(201,162,75,.35); }
+.scroll-cue{ margin-top:56px; font-size:1.3rem; color:var(--gold); animation:bob 2s ease-in-out infinite; position:relative; z-index:1; }
+@keyframes bob{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(8px);} }
+
+/* ---------- LEDGER SUMMARY (counters) ---------- */
+.ledger-summary{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.ledger-cell{
+  padding:34px 6vw; text-align:center; border-inline-end:1px solid var(--line);
+}
+.ledger-cell:last-child{ border-inline-end:none; }
+.ledger-cell .num{ font-size:2.6rem; font-weight:600; color:var(--gold); }
+.ledger-cell .lbl{ font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--text-muted); margin-top:6px; }
+
+/* ---------- TIMELINE (ledger statement) ---------- */
+.ledger{ border-top:1px solid var(--line); }
+.ledger-row{
+  display:grid; grid-template-columns:110px 1fr 90px; gap:22px; align-items:start;
+  padding:26px 0; border-bottom:1px solid var(--line);
+  border-inline-start:2px solid transparent; padding-inline-start:16px;
+  transition:border-color .25s ease, background .25s ease;
+}
+.ledger-row:hover{ border-inline-start-color:var(--gold); background:var(--bg-soft); }
+.ledger-row .ref{ font-size:.72rem; color:var(--text-muted); }
+.ledger-row .date{ font-size:.82rem; color:var(--gold); }
+.ledger-row h3{ font-size:1.05rem; font-weight:600; margin-bottom:6px; }
+.ledger-row p{ font-size:.9rem; color:var(--text-muted); line-height:1.7; }
+.ledger-row .tag{
+  align-self:start; justify-self:end; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--gold); border:1px solid var(--line); padding:5px 10px; border-radius:var(--radius); white-space:nowrap;
+}
+@media (max-width:640px){
+  .ledger-row{ grid-template-columns:1fr; }
+  .ledger-row .tag{ justify-self:start; }
+}
+
+/* ---------- SKILLS ---------- */
+.skills-grid{ display:grid; gap:26px; }
+.skill-row{ display:grid; grid-template-columns:180px 1fr 50px; align-items:center; gap:18px; }
+.skill-row .name{ font-size:.92rem; font-weight:600; }
+.bar-track{ height:8px; border-radius:20px; background:var(--bg-soft); overflow:hidden; border:1px solid var(--line); }
+.bar-fill{ height:100%; background:linear-gradient(90deg,var(--gold),var(--gold-bright)); width:0; border-radius:20px; transition:width 1.2s cubic-bezier(.2,.8,.2,1); }
+.skill-row .pct{ font-family:'IBM Plex Mono',monospace; font-size:.85rem; color:var(--gold); text-align:end; }
+@media (max-width:600px){ .skill-row{ grid-template-columns:110px 1fr 40px; } }
+
+/* ---------- GALLERY ---------- */
+.gallery-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; }
+.gallery-item{ position:relative; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); aspect-ratio:4/5; }
+.gallery-item img{ width:100%; height:100%; object-fit:cover; transition:transform .4s ease; display:block; }
+.gallery-item:hover img{ transform:scale(1.06); }
+.gallery-cap{
+  position:absolute; inset-inline:0; bottom:0; padding:10px 12px 8px;
+  background:linear-gradient(to top, rgba(10,19,31,.88), transparent);
+  color:#F3EEE1; font-size:.75rem; font-weight:600; line-height:1.3;
+}
+
+/* ---------- CARD GRIDS (certs, experience, projects, articles) ---------- */
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:20px; }
+.card{
+  background:var(--card-bg); border:1px solid var(--line); border-radius:var(--radius);
+  padding:26px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--gold); }
+.card .cap{ font-family:'IBM Plex Mono',monospace; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+.card h3{ font-size:1.05rem; margin-bottom:8px; font-weight:600; }
+.card p{ font-size:.88rem; color:var(--text-muted); line-height:1.65; }
+.card .meta{ margin-top:14px; font-size:.76rem; color:var(--text-muted); font-family:'IBM Plex Mono',monospace; display:flex; justify-content:space-between; border-top:1px solid var(--line); padding-top:12px; }
+
+/* ---------- CONTACT ---------- */
+.contact-wrap{ display:flex; flex-wrap:wrap; gap:16px; }
+.contact-btn{
+  display:flex; align-items:center; gap:10px; padding:16px 24px;
+  border:1px solid var(--line); border-radius:var(--radius); font-size:.9rem; font-weight:600;
+  flex:1 1 200px; justify-content:center; transition:border-color .2s, transform .2s;
+  background:var(--card-bg);
+}
+.contact-btn:hover{ border-color:var(--gold); transform:translateY(-3px); }
+.contact-btn .ic{ font-size:1.15rem; }
+
+.cv-box{
+  display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
+  background:var(--card-bg); border:1px solid var(--line); border-radius:var(--radius); padding:30px;
+}
+
+footer{ text-align:center; padding:40px 6vw; font-size:.78rem; color:var(--text-muted); font-family:'IBM Plex Mono',monospace; border-top:1px solid var(--line); }
+
+.hidden-by-search{ display:none !important; }
+[data-i18n], [data-i18n-html]{ }
+.reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in{ opacity:1; transform:translateY(0); }
+
+@media (max-width:820px){
+  nav.links{ display:none; }
+  section{ padding:70px 6vw; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">YASEEN<b>.</b>DESOUKY</div>
+    <nav class="links">
+      <a href="#journey" data-i18n="nav.journey">الرحلة</a>
+      <a href="#gallery" data-i18n="nav.gallery">الصور</a>
+      <a href="#skills" data-i18n="nav.skills">المهارات</a>
+      <a href="#certificates" data-i18n="nav.certs">الشهادات</a>
+      <a href="#experience" data-i18n="nav.exp">الخبرات</a>
+      <a href="#projects" data-i18n="nav.projects">المشاريع</a>
+      <a href="#cv" data-i18n="nav.cv">السيرة الذاتية</a>
+      <a href="#contact" data-i18n="nav.contact">تواصل</a>
+    </nav>
+    <div class="nav-tools">
+      <span id="search-results-count"></span>
+      <div class="search-wrap" id="searchWrap">
+        <input type="text" id="searchInput" data-i18n-placeholder="search.placeholder" placeholder="ابحث في الموقع...">
+        <button class="icon-btn" id="searchToggle" aria-label="search">🔍</button>
+      </div>
+      <button class="icon-btn lang-btn" id="langToggle">AR</button>
+      <button class="icon-btn" id="darkToggle" aria-label="dark mode">☀️</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="portrait" id="portrait" src="photo.jpg" alt="Yaseen Desouky">
+  <h1 class="display" data-i18n="hero.name">ياسين دسوقي</h1>
+  <div class="roles">
+    <span data-i18n="hero.role1">محلل مالي</span><span class="dot">•</span>
+    <span data-i18n="hero.role2">محاسب</span><span class="dot">•</span>
+    <span data-i18n="hero.role3">محلل بيانات</span><span class="dot">•</span>
+    <span data-i18n="hero.role4">مهندس برمجيات</span>
+  </div>
+  <a href="#journey" class="cta-btn" data-i18n="hero.cta">استكشف رحلتي</a>
+  <div class="scroll-cue">↓</div>
+</section>
+
+<div class="ledger-summary">
+  <div class="ledger-cell">
+    <div class="num mono"><span class="counter" data-target="8">0</span></div>
+    <div class="lbl" data-i18n="stats.projects">مشاريع منجزة</div>
+  </div>
+  <div class="ledger-cell">
+    <div class="num mono"><span class="counter" data-target="8">0</span></div>
+    <div class="lbl" data-i18n="stats.certs">شهادات معتمدة</div>
+  </div>
+  <div class="ledger-cell">
+    <div class="num mono"><span class="counter" data-target="2">0</span></div>
+    <div class="lbl" data-i18n="stats.branches">دول عملت بها</div>
+  </div>
+  <div class="ledger-cell">
+    <div class="num mono"><span class="counter" data-target="4">0</span></div>
+    <div class="lbl" data-i18n="stats.years">سنوات خبرة</div>
+  </div>
+</div>
+
+<section id="journey">
+  <div class="eyebrow" data-i18n="journey.eyebrow">السجل الزمني</div>
+  <h2 class="section-title" data-i18n="journey.title">رحلتي المهنية</h2>
+  <p class="section-sub" data-i18n="journey.sub">كل قيد هنا محطة حقيقية في المسار — من بداية العمل في التجزئة إلى إدارة شبكة توزيع متعددة الفروع.</p>
+  <div class="ledger" id="journeyList"></div>
+</section>
+
+<section id="gallery">
+  <div class="eyebrow" data-i18n="gallery.eyebrow">اللحظات</div>
+  <h2 class="section-title" data-i18n="gallery.title">معرض الصور</h2>
+  <p class="section-sub" data-i18n="gallery.sub">لقطات من المؤتمرات، التدريب، التخرج، والعمل التطوعي.</p>
+  <div class="gallery-grid" id="galleryList"></div>
+</section>
+
+<section id="skills">
+  <div class="eyebrow" data-i18n="skills.eyebrow">الكفاءات</div>
+  <h2 class="section-title" data-i18n="skills.title">المهارات والنسب</h2>
+  <p class="section-sub" data-i18n="skills.sub">أدوات ومجالات أعمل بها يوميًا، بنسب إتقان تقريبية.</p>
+  <div class="skills-grid" id="skillsList"></div>
+</section>
+
+<section id="certificates">
+  <div class="eyebrow" data-i18n="certs.eyebrow">الاعتماد</div>
+  <h2 class="section-title" data-i18n="certs.title">الشهادات</h2>
+  <p class="section-sub" data-i18n="certs.sub">استبدل هذه القائمة بشهاداتك الفعلية وتواريخها.</p>
+  <div class="grid" id="certsList"></div>
+</section>
+
+<section id="experience">
+  <div class="eyebrow" data-i18n="exp.eyebrow">المسيرة</div>
+  <h2 class="section-title" data-i18n="exp.title">الخبرات العملية</h2>
+  <p class="section-sub" data-i18n="exp.sub">المسؤوليات والأدوار التي شغلتها عبر السنوات.</p>
+  <div class="grid" id="expList"></div>
+</section>
+
+<section id="projects">
+  <div class="eyebrow" data-i18n="proj.eyebrow">التنفيذ</div>
+  <h2 class="section-title" data-i18n="proj.title">المشاريع</h2>
+  <p class="section-sub" data-i18n="proj.sub">أمثلة من المشاريع — استبدلها بتفاصيل مشاريعك الحقيقية وروابطها.</p>
+  <div class="grid" id="projList"></div>
+</section>
+
+<section id="cv">
+  <div class="eyebrow" data-i18n="cv.eyebrow">الملف</div>
+  <h2 class="section-title" data-i18n="cv.title">السيرة الذاتية</h2>
+  <div class="cv-box">
+    <div>
+      <div class="cap mono" data-i18n="cv.file">CV_Yaseen_Desouky.pdf</div>
+      <p style="color:var(--text-muted); font-size:.88rem; max-width:480px;" data-i18n="cv.desc">حمّل نسخة كاملة من سيرتي الذاتية بصيغة PDF.</p>
+    </div>
+    <a href="cv.pdf" download class="cta-btn" data-i18n="cv.download">تحميل السيرة الذاتية</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="eyebrow" data-i18n="contact.eyebrow">تواصل</div>
+  <h2 class="section-title" data-i18n="contact.title">لنتحدث</h2>
+  <p class="section-sub" data-i18n="contact.sub">تواصل معي مباشرة عبر أحد القنوات التالية.</p>
+  <div class="contact-wrap">
+    <a class="contact-btn" href="https://wa.me/971503017231" target="_blank"><span class="ic">💬</span><span data-i18n="contact.whatsapp_ae">واتساب (الإمارات)</span></a>
+    <a class="contact-btn" href="https://wa.me/201553336617" target="_blank"><span class="ic">💬</span><span data-i18n="contact.whatsapp_eg">واتساب (مصر)</span></a>
+    <a class="contact-btn" href="https://www.instagram.com/yaseen_desouky?igsh=NzV1YmN4cTJsYmsy" target="_blank"><span class="ic">📷</span><span data-i18n="contact.instagram">إنستجرام</span></a>
+    <a class="contact-btn" href="https://www.linkedin.com/in/yaseen-desouky-945352240" target="_blank"><span class="ic">💼</span><span data-i18n="contact.linkedin">لينكدإن</span></a>
+    <a class="contact-btn" href="mailto:yaseend39@gmail.com"><span class="ic">✉️</span><span data-i18n="contact.email">إيميل</span></a>
+  </div>
+</section>
+
+<footer data-i18n="footer.text">© 2026 Yaseen Desouky — Built with intent.</footer>
+
+<script>
+/* ================= CONTENT (EDIT ME) ================= */
+const I18N = {
+  ar: {
+    "nav.journey":"الرحلة","nav.gallery":"الصور","nav.skills":"المهارات","nav.certs":"الشهادات","nav.exp":"الخبرات",
+    "nav.projects":"المشاريع","nav.cv":"السيرة الذاتية","nav.contact":"تواصل",
+    "hero.name":"ياسين دسوقي","hero.role1":"محلل مالي","hero.role2":"محاسب","hero.role3":"محلل بيانات","hero.role4":"مهندس برمجيات",
+    "hero.cta":"استكشف رحلتي",
+    "stats.projects":"مشاريع منجزة","stats.certs":"شهادات معتمدة","stats.branches":"دول عملت بها","stats.years":"سنوات خبرة",
+    "journey.eyebrow":"السجل الزمني","journey.title":"رحلتي المهنية",
+    "journey.sub":"كل قيد هنا محطة حقيقية في المسار — من مقاعد الدراسة إلى العمل كمحلل مالي في دبي.",
+    "gallery.eyebrow":"اللحظات","gallery.title":"معرض الصور","gallery.sub":"لقطات من المؤتمرات، التدريب، التخرج، والعمل التطوعي.",
+    "skills.eyebrow":"الكفاءات","skills.title":"المهارات والنسب","skills.sub":"أدوات ومجالات أعمل بها يوميًا، بنسب إتقان تقريبية.",
+    "certs.eyebrow":"الاعتماد","certs.title":"الشهادات","certs.sub":"استبدل هذه القائمة بشهاداتك الفعلية وتواريخها.",
+    "exp.eyebrow":"المسيرة","exp.title":"الخبرات العملية","exp.sub":"المسؤوليات والأدوار التي شغلتها عبر السنوات.",
+    "proj.eyebrow":"التنفيذ","proj.title":"المشاريع","proj.sub":"أمثلة من المشاريع — استبدلها بتفاصيل مشاريعك الحقيقية وروابطها.",
+    "cv.eyebrow":"الملف","cv.title":"السيرة الذاتية","cv.file":"CV_Yaseen_Desouky.pdf",
+    "cv.desc":"حمّل نسخة كاملة من سيرتي الذاتية بصيغة PDF.","cv.download":"تحميل السيرة الذاتية",
+    "contact.eyebrow":"تواصل","contact.title":"لنتحدث","contact.sub":"تواصل معي مباشرة عبر أحد القنوات التالية.",
+    "contact.whatsapp_ae":"واتساب (الإمارات)","contact.whatsapp_eg":"واتساب (مصر)","contact.instagram":"إنستجرام","contact.linkedin":"لينكدإن","contact.email":"إيميل",
+    "footer.text":"© 2026 ياسين دسوقي — بُني بعناية.",
+    "search.placeholder":"ابحث في الموقع..."
+  },
+  en: {
+    "nav.journey":"Journey","nav.gallery":"Gallery","nav.skills":"Skills","nav.certs":"Certificates","nav.exp":"Experience",
+    "nav.projects":"Projects","nav.cv":"CV","nav.contact":"Contact",
+    "hero.name":"Yaseen Desouky","hero.role1":"Financial Analyst","hero.role2":"Accountant","hero.role3":"Data Analyst","hero.role4":"Software Engineer",
+    "hero.cta":"Explore My Journey",
+    "stats.projects":"Projects Delivered","stats.certs":"Certificates Earned","stats.branches":"Countries Worked In","stats.years":"Years of Experience",
+    "journey.eyebrow":"The Ledger","journey.title":"My Professional Journey",
+    "journey.sub":"Every entry here is a real milestone — from student life to working as a Financial Analyst in Dubai.",
+    "gallery.eyebrow":"Moments","gallery.title":"Gallery","gallery.sub":"Snapshots from conferences, training, graduation, and volunteer work.",
+    "skills.eyebrow":"Competencies","skills.title":"Skills & Stats","skills.sub":"Tools and areas I work in daily, with approximate proficiency.",
+    "certs.eyebrow":"Credentials","certs.title":"Certificates","certs.sub":"Replace this list with your real certificates and dates.",
+    "exp.eyebrow":"Track Record","exp.title":"Experience","exp.sub":"Roles and responsibilities held over the years.",
+    "proj.eyebrow":"Execution","proj.title":"Projects","proj.sub":"Sample entries — replace with your real projects and links.",
+    "cv.eyebrow":"Document","cv.title":"CV","cv.file":"CV_Yaseen_Desouky.pdf",
+    "cv.desc":"Download the full version of my CV as a PDF.","cv.download":"Download CV",
+    "contact.eyebrow":"Contact","contact.title":"Let's Talk","contact.sub":"Reach out directly through any of the channels below.",
+    "contact.whatsapp_ae":"WhatsApp (UAE)","contact.whatsapp_eg":"WhatsApp (Egypt)","contact.instagram":"Instagram","contact.linkedin":"LinkedIn","contact.email":"Email",
+    "footer.text":"© 2026 Yaseen Desouky — Built with intent.",
+    "search.placeholder":"Search the site..."
+  }
+};
+
+const GALLERY = {
+  ar: [
+    {src:"gallery1.jpg", cap:"البورصة المصرية — قاعة التداول"},
+    {src:"gallery7.jpg", cap:"ممثل البنك الأهلي المصري في Techne Summit"},
+    {src:"gallery3.jpg", cap:"حفل تخرج جامعة كفر الشيخ 2023"},
+    {src:"gallery4.jpg", cap:"Techne Summit — الإسكندرية"},
+    {src:"gallery5.jpg", cap:"Techne Summit مع الزملاء"},
+    {src:"gallery6.jpg", cap:"التحالف الوطني / Life Makers"}
+  ],
+  en: [
+    {src:"gallery1.jpg", cap:"Egyptian Exchange — Trading Floor"},
+    {src:"gallery7.jpg", cap:"Representing National Bank of Egypt at Techne Summit"},
+    {src:"gallery3.jpg", cap:"Kafr El-Shaikh University Graduation, 2023"},
+    {src:"gallery4.jpg", cap:"Techne Summit — Alexandria"},
+    {src:"gallery5.jpg", cap:"Techne Summit with colleagues"},
+    {src:"gallery6.jpg", cap:"National Alliance / Life Makers"}
+  ]
+};
+
+const DATA = {
+  ar: {
+    journey: [
+      {ref:"001", date:"2019", title:"التفوق في الثانوية العامة", desc:"تخرج من مدرسة جمال عبدالناصر الثانوية العسكرية بدسوق بنسبة 90.5%.", tag:"بداية"},
+      {ref:"002", date:"2021", title:"محاسب مبتدئ — فندق Retal View", desc:"إدارة الحسابات الدائنة والمدينة، وتحسين كفاءة الدفع بنسبة 30% عبر نظام آلي.", tag:"عمل"},
+      {ref:"003", date:"2022", title:"برامج تدريب صيفي بالبنوك", desc:"تدريب صيفي في بنك مصر، البنك التجاري الدولي CIB، وسفير برنامج MINT بالتعاون مع EG Bank.", tag:"تدريب"},
+      {ref:"004", date:"2023", title:"التخرج من جامعة كفر الشيخ", desc:"بكالوريوس تجارة (محاسبة، شعبة إنجليزي) بتقدير جيد جدًا، وبدء مسار Full Stack Software Engineering مع ALX.", tag:"تخرج"},
+      {ref:"005", date:"2024", title:"خدمة عملاء — البنك الأهلي المصري", desc:"التعامل مع عمليات الحسابات وحل الشكاوى عبر أنظمة بنكية متعددة بالقاهرة.", tag:"عمل"},
+      {ref:"006", date:"2025", title:"الانتقال إلى دبي كمحلل مالي", desc:"انضم إلى Dubai Library Distributors LLC كمحلل مالي، مسؤول عن التقارير المالية والتحليل والتنبؤ.", tag:"نقلة"},
+      {ref:"007", date:"2026", title:"مشاريع تحليل بيانات ولوحات تفاعلية", desc:"بناء تقارير جاهزية الشراء ولوحات معلومات تفاعلية ثنائية اللغة لدعم قرارات المخزون.", tag:"حالي"}
+    ],
+    skills: [
+      {name:"التحليل المالي والتقارير", pct:92},
+      {name:"Excel المتقدم ولوحات المعلومات", pct:95},
+      {name:"الموازنات والتنبؤ المالي", pct:85},
+      {name:"تسوية الحسابات البنكية", pct:88},
+      {name:"أنظمة QuickBooks / Sage / Xero", pct:80},
+      {name:"العربية والإنجليزية", pct:95}
+    ],
+    certs: [
+      {cap:"شهادة", title:"Full Stack Software Engineering — ALX", desc:"برنامج ALX (KEN) لهندسة البرمجيات، بمعدل تفوق 107.17% في مرحلة Foundations.", meta:"2023 — جارٍ"},
+      {cap:"شهادة", title:"تحليل القوائم المالية", desc:"قراءة القوائم المالية واتخاذ القرارات المبنية على البيانات.", meta:"مايو 2023"},
+      {cap:"شهادة", title:"Business Intelligence (BI)", desc:"شهادة من منصة M3aarf في أساسيات الذكاء التجاري.", meta:"يونيو 2022"},
+      {cap:"شهادة", title:"سفير برنامج MINT — EG Bank", desc:"إتمام برنامج السفراء لمدة شهر بالتعاون مع icareer وEG Bank.", meta:"أبريل 2022"},
+      {cap:"شهادة", title:"التدريب الصيفي — بنك مصر", desc:"برنامج رواد للتدريب الصيفي بقطاع الموارد البشرية والتطوير.", meta:"2022"},
+      {cap:"شهادة", title:"ريادة الأعمال — البنك التجاري الدولي CIB", desc:"برنامج صيفي بعنوان Entrepreneurship في البنك التجاري الدولي.", meta:"سبتمبر 2022"},
+      {cap:"شهادة", title:"Excel المتقدم للمحاسبين", desc:"الدوال المتقدمة والجداول المحورية والنمذجة المالية.", meta:"مايو 2021"},
+      {cap:"شهادة", title:"التغير المناخي للجميع", desc:"دورة محو الأمية المناخية من المجلس العربي للشباب والتغير المناخي.", meta:"مارس 2023"}
+    ],
+    experience: [
+      {cap:"دور حالي", title:"محلل مالي — Dubai Library Distributors LLC", desc:"إعداد وتحليل القوائم المالية الشهرية والربعية، تحليل الانحرافات، والتنسيق مع المراجعين الخارجيين.", meta:"أكتوبر 2025 — الآن · دبي"},
+      {cap:"دور موازٍ", title:"مهندس برمجيات (Full Stack) — عن بعد مع ALX", desc:"متخرج من برنامج ALX لهندسة البرمجيات Full Stack، وبيشتغل عن بعد على بناء صفحات ويب وأدوات صغيرة بلغات HTML وCSS وJavaScript، مع أتمتة مهام تحليل البيانات وتحويلها لتقارير تفاعلية.", meta:"2023 — الآن · عن بعد"},
+      {cap:"دور", title:"ممثل خدمة عملاء — البنك الأهلي المصري", desc:"دعم العملاء هاتفيًا، إدارة عمليات الحسابات وحل الشكاوى عبر أنظمة بنكية متعددة.", meta:"يناير 2024 — أكتوبر 2025 · القاهرة"},
+      {cap:"دور", title:"محاسب مبتدئ — فندق Retal View", desc:"إدارة الحسابات الدائنة والمدينة، تسويات بنكية شهرية، ودعم إغلاق نهاية الشهر.", meta:"سبتمبر 2021 — يونيو 2023 · الساحل الشمالي"}
+    ],
+    projects: [
+      {cap:"مشروع", title:"لوحة تحكم جاهزية المشتريات", desc:"لوحة تفاعلية ثنائية اللغة تقارن المبيعات بالمخزون المتاح وتصنف كل منتج (عاجل / منخفض / كافٍ) لدعم قرار الشراء.", meta:"2026", link:"dashboard-purchase-ar.html", linkLabel:"عرض اللوحة (عربي)"},
+      {cap:"مشروع", title:"Purchase Readiness Dashboard (EN)", desc:"النسخة الإنجليزية من نفس اللوحة التفاعلية لتحليل جاهزية الشراء.", meta:"2026", link:"dashboard-purchase-en.html", linkLabel:"View Dashboard (EN)"},
+      {cap:"مشروع", title:"ملف تحليل إعادة الطلب للمخزون", desc:"ملف Excel متعدد الأوراق يحسب نسبة التغطية الشهرية لكل صنف ويقترح قرار الشراء تلقائيًا.", meta:"2026", link:"Inventory_Reorder_Dashboard.xlsx", linkLabel:"تحميل ملف Excel"},
+      {cap:"مشروع", title:"تقرير جاهزية الشراء الكامل", desc:"ملف Excel بخمس أوراق عمل: لوحة رئيسية، قائمة أولويات الشراء، رسم بياني للمبيعات مقابل المخزون، والأموال المتاحة.", meta:"2026", link:"Purchase_Readiness_Report.xlsx", linkLabel:"تحميل ملف Excel"},
+      {cap:"مشروع برمجي", title:"هذا الموقع الشخصي ثنائي اللغة", desc:"بناء الموقع بالكامل بلغات HTML وCSS وJavaScript الخام، بميزات تبديل اللغة والوضع الليلي والبحث الداخلي وعدادات متحركة.", meta:"2026"},
+      {cap:"مشروع برمجي", title:"سكريبت أتمتة تقارير Excel", desc:"سكريبت يقرأ بيانات مبيعات ومخزون خام ويولّد تلقائيًا تقرير جاهزية شراء منسق بمؤشرات أداء وتنسيق شرطي.", meta:"2026"},
+      {cap:"مشروع تحليل بيانات", title:"لوحة تحليل اتجاهات المبيعات", desc:"لوحة تفاعلية لرصد اتجاهات المبيعات الشهرية وتحديد المنتجات الأعلى أداءً باستخدام JavaScript ورسوم بيانية.", meta:"2026"}
+    ]
+  },
+  en: {
+    journey: [
+      {ref:"001", date:"2019", title:"Graduated High School with Honors", desc:"Graduated from Gamal Abdel Nasser Military Secondary School, Desouk, with 90.5%.", tag:"Start"},
+      {ref:"002", date:"2021", title:"Junior Accountant — Retal View Hotel", desc:"Managed accounts payable/receivable and improved payment efficiency by 30% via an automated system.", tag:"Work"},
+      {ref:"003", date:"2022", title:"Summer Banking Training Programs", desc:"Summer training at Banque Misr and CIB Egypt, plus the MINT Ambassador Program with EG Bank.", tag:"Training"},
+      {ref:"004", date:"2023", title:"Graduated Kafr El-Shaikh University", desc:"Bachelor of Commerce (Accounting, English Section), and started ALX's Full Stack Software Engineering track.", tag:"Graduation"},
+      {ref:"005", date:"2024", title:"Customer Service Rep — National Bank of Egypt", desc:"Handled account operations and complaint resolution across multiple banking systems in Cairo.", tag:"Work"},
+      {ref:"006", date:"2025", title:"Moved to Dubai as a Financial Analyst", desc:"Joined Dubai Library Distributors LLC, responsible for financial reporting, analysis and forecasting.", tag:"Shift"},
+      {ref:"007", date:"2026", title:"Data Analysis & Interactive Dashboards", desc:"Building bilingual purchasing readiness reports and interactive dashboards to support stock decisions.", tag:"Current"}
+    ],
+    skills: [
+      {name:"Financial Analysis & Reporting", pct:92},
+      {name:"Advanced Excel & Dashboards", pct:95},
+      {name:"Budgeting & Forecasting", pct:85},
+      {name:"Bank Reconciliation", pct:88},
+      {name:"QuickBooks / Sage / Xero", pct:80},
+      {name:"Arabic & English", pct:95}
+    ],
+    certs: [
+      {cap:"Certificate", title:"Full Stack Software Engineering — ALX", desc:"ALX (KEN) software engineering program, scored 107.17% in the Foundations sprint.", meta:"2023 — Ongoing"},
+      {cap:"Certificate", title:"Financial Statement Analysis", desc:"Reading financial statements and data-driven decision making.", meta:"May 2023"},
+      {cap:"Certificate", title:"Business Intelligence (BI)", desc:"Certificate from the M3aarf platform on BI fundamentals.", meta:"June 2022"},
+      {cap:"Certificate", title:"MINT Ambassador — EG Bank", desc:"Completed the one-month Ambassadors Program with icareer and EG Bank.", meta:"April 2022"},
+      {cap:"Certificate", title:"Summer Training — Banque Misr", desc:"Rowad summer training program with the HR & Development sector.", meta:"2022"},
+      {cap:"Certificate", title:"Entrepreneurship — CIB Egypt", desc:"Summer program themed \"Entrepreneurship\" at Commercial International Bank.", meta:"September 2022"},
+      {cap:"Certificate", title:"Advanced Excel for Accountants", desc:"Advanced functions, pivot tables, and financial modeling.", meta:"May 2021"},
+      {cap:"Certificate", title:"Climate Change for All", desc:"Climate literacy course from the Arab Youth Council for Climate Change.", meta:"March 2023"}
+    ],
+    experience: [
+      {cap:"Current Role", title:"Financial Analyst — Dubai Library Distributors LLC", desc:"Preparing and analyzing monthly and quarterly financial statements, variance analysis, and audit coordination.", meta:"Oct 2025 — Present · Dubai"},
+      {cap:"Parallel Role", title:"Software Engineer (Full Stack) — Remote, ALX", desc:"ALX Full Stack Software Engineering graduate, building small web pages and tools with HTML, CSS and JavaScript remotely, plus automating data-analysis tasks into interactive reports.", meta:"2023 — Present · Remote"},
+      {cap:"Role", title:"Customer Service Representative — National Bank of Egypt", desc:"Delivered phone support, managed account operations and complaint resolution across banking systems.", meta:"Jan 2024 — Oct 2025 · Cairo"},
+      {cap:"Role", title:"Junior Accountant — Retal View Hotel", desc:"Managed accounts payable/receivable, monthly bank reconciliations, and month-end close support.", meta:"Sep 2021 — Jun 2023 · North Coast"}
+    ],
+    projects: [
+      {cap:"Project", title:"Purchase Readiness Dashboard (AR)", desc:"Bilingual interactive dashboard comparing sales vs. available stock, flagging each item as urgent, low or sufficient.", meta:"2026", link:"dashboard-purchase-ar.html", linkLabel:"View Dashboard (AR)"},
+      {cap:"Project", title:"Purchase Readiness Dashboard (EN)", desc:"English version of the same live dashboard for purchasing readiness analysis.", meta:"2026", link:"dashboard-purchase-en.html", linkLabel:"View Dashboard (EN)"},
+      {cap:"Project", title:"Inventory Reorder Analysis", desc:"Multi-sheet Excel workbook calculating monthly stock coverage per item and auto-suggesting a reorder decision.", meta:"2026", link:"Inventory_Reorder_Dashboard.xlsx", linkLabel:"Download Excel file"},
+      {cap:"Project", title:"Full Purchase Readiness Report", desc:"Five-sheet Excel file: main dashboard, priority purchase list, sales-vs-stock chart, and available funds tracker.", meta:"2026", link:"Purchase_Readiness_Report.xlsx", linkLabel:"Download Excel file"},
+      {cap:"Software Project", title:"This Bilingual Portfolio Website", desc:"Built end-to-end with vanilla HTML, CSS and JavaScript — language switcher, dark mode, in-page search, and animated counters.", meta:"2026"},
+      {cap:"Software Project", title:"Excel Report Automation Script", desc:"A script that reads raw sales and stock data and automatically generates a formatted purchasing readiness report with KPIs and conditional formatting.", meta:"2026"},
+      {cap:"Data Analysis Project", title:"Sales Trend Analytics Dashboard", desc:"Interactive dashboard tracking monthly sales trends and top-performing products, built with JavaScript and charts.", meta:"2026"}
+    ]
+  }
+};
+
+let currentLang = 'ar';
+
+function renderContent(lang){
+  const d = DATA[lang];
+  document.getElementById('galleryList').innerHTML = GALLERY[lang].map(g => `
+    <div class="gallery-item searchable" data-search="${g.cap}">
+      <img src="${g.src}" alt="${g.cap}" loading="lazy">
+      <div class="gallery-cap">${g.cap}</div>
+    </div>`).join('');
+
+  document.getElementById('journeyList').innerHTML = d.journey.map(j => `
+    <div class="ledger-row searchable" data-search="${j.title} ${j.desc}">
+      <div><div class="ref mono">#${j.ref}</div><div class="date mono">${j.date}</div></div>
+      <div><h3>${j.title}</h3><p>${j.desc}</p></div>
+      <div class="tag">${j.tag}</div>
+    </div>`).join('');
+
+  document.getElementById('skillsList').innerHTML = d.skills.map(s => `
+    <div class="skill-row searchable" data-search="${s.name}">
+      <div class="name">${s.name}</div>
+      <div class="bar-track"><div class="bar-fill" data-pct="${s.pct}"></div></div>
+      <div class="pct mono">${s.pct}%</div>
+    </div>`).join('');
+
+  document.getElementById('certsList').innerHTML = d.certs.map(c => `
+    <div class="card searchable" data-search="${c.title} ${c.desc}">
+      <div class="cap">${c.cap}</div><h3>${c.title}</h3><p>${c.desc}</p>
+      <div class="meta"><span>${c.meta}</span><span>✓</span></div>
+    </div>`).join('');
+
+  document.getElementById('expList').innerHTML = d.experience.map(e => `
+    <div class="card searchable" data-search="${e.title} ${e.desc}">
+      <div class="cap">${e.cap}</div><h3>${e.title}</h3><p>${e.desc}</p>
+      <div class="meta"><span>${e.meta}</span></div>
+    </div>`).join('');
+
+  document.getElementById('projList').innerHTML = d.projects.map(p => `
+    <div class="card searchable" data-search="${p.title} ${p.desc}">
+      <div class="cap">${p.cap}</div><h3>${p.title}</h3><p>${p.desc}</p>
+      ${p.link ? `<a href="${p.link}" target="_blank" style="display:inline-block;margin-top:12px;font-size:.8rem;font-weight:600;color:var(--gold);border-bottom:1px solid var(--gold);">${p.linkLabel} →</a>` : ''}
+      <div class="meta"><span>${p.meta}</span><span>→</span></div>
+    </div>`).join('');
+
+  animateBars();
+}
+
+function applyI18n(lang){
+  const dict = I18N[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(dict[key]) el.textContent = dict[key];
+  });
+  const searchInput = document.getElementById('searchInput');
+  if(dict['search.placeholder']) searchInput.setAttribute('placeholder', dict['search.placeholder']);
+}
+
+function setLang(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+  document.getElementById('langToggle').textContent = (lang === 'ar') ? 'EN' : 'AR';
+  applyI18n(lang);
+  renderContent(lang);
+}
+
+document.getElementById('langToggle').addEventListener('click', ()=>{
+  setLang(currentLang === 'ar' ? 'en' : 'ar');
+});
+
+document.getElementById('darkToggle').addEventListener('click', ()=>{
+  document.documentElement.classList.toggle('dark');
+  const isDark = document.documentElement.classList.contains('dark');
+  document.getElementById('darkToggle').textContent = isDark ? '☀️' : '🌙';
+});
+
+document.getElementById('searchToggle').addEventListener('click', ()=>{
+  const wrap = document.getElementById('searchWrap');
+  wrap.classList.toggle('open');
+  if(wrap.classList.contains('open')) document.getElementById('searchInput').focus();
+});
+
+document.getElementById('searchInput').addEventListener('input', (e)=>{
+  const q = e.target.value.trim().toLowerCase();
+  const items = document.querySelectorAll('.searchable');
+  let count = 0;
+  items.forEach(el=>{
+    const text = (el.getAttribute('data-search') || '').toLowerCase();
+    const match = q === '' || text.includes(q);
+    el.classList.toggle('hidden-by-search', !match);
+    if(match) count++;
+  });
+  const countEl = document.getElementById('search-results-count');
+  countEl.textContent = q === '' ? '' : (currentLang==='ar' ? `${count} نتيجة` : `${count} results`);
+});
+
+function animateBars(){
+  document.querySelectorAll('.bar-fill').forEach(el=>{
+    requestAnimationFrame(()=>{ el.style.width = el.getAttribute('data-pct') + '%'; });
+  });
+}
+
+/* counters */
+function animateCounters(){
+  document.querySelectorAll('.counter').forEach(el=>{
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    let cur = 0;
+    const step = Math.max(1, Math.round(target/40));
+    const iv = setInterval(()=>{
+      cur += step;
+      if(cur >= target){ cur = target; clearInterval(iv); }
+      el.textContent = cur;
+    }, 30);
+  });
+}
+const summaryObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ animateCounters(); summaryObserver.disconnect(); }
+  });
+}, {threshold:.4});
+summaryObserver.observe(document.querySelector('.ledger-summary'));
+
+/* reveal on scroll for section titles */
+document.querySelectorAll('section').forEach(s=>{
+  s.classList.add('reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  io.observe(s);
+});
+
+/* init */
+setLang('en');
+</script>
+</body>
+</html>
